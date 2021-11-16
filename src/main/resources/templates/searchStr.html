@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+
+<body>
+<h1>A Square Matrix</h1>
+<div class="wrapper">
+    <pre th:text=" ${charMatrixView}"></pre>
+</div>
+
+<br/>
+<div class="wrapper2 scroll">
+    <pre th:text="${patternFound}"></pre>
+    <span>Failed attempts = </span><span th:text="${failedAttempts}"></span>
+<!--    <pre th:text="${test}"></pre>-->
+</div>
+<div class="buttonHolder">
+    <a href="/home">Play again?</a>
+    <a href="/">New User?</a><br/>
+</div>
+
+</body>
+</html>

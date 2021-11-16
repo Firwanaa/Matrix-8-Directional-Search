@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+
+<body>
+<form action="#" th:action="@{/home}" method="get" th:object="${PersonInfo}">
+    <h1>Square Matrix</h1>
+    <div class="container">
+        <p>User ID:</p><input placeholder="Enter user id" type="number" th:field="*{id}" vlaue=""  required/>
+        <p>User Name:</p><input placeholder="Enter user name" type="text" th:field="*{name}"  required/>
+    </div>
+    <div class="buttonHolder">
+        <input class="btn" type="submit" value="Submit" />
+        <br />
+    </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+
+<body>
+<form action="#" th:action="@{/view}" method="get" th:object="${squareMatrix}">
+    <h1>Square Matrix</h1>
+<!--    <p>User Name:</p><input type="text" th:field="*{id}" />-->
+<!--    <p>User Name:</p><input type="text" th:field="*{name}" />-->
+    <div class="container">
+        <p>Matrix side: <input type="number" placeholder="Enter num 5 or more"  name="d"  th:field="*{d1}" step="1" vlaue="" min="5"  required/></p>
+    </div>
+    <div class="buttonHolder">
+        <input class="btn" type="submit" value="Submit" />
+        <br />
+
+    </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+
+<body>
+<h1>A Square Matrix</h1>
+<div class="wrapper">
+    <pre th:text=" ${charMatrixView}"></pre>
+</div>
+
+<br/>
+<div class="wrapper">
+    <form action="#" th:action="@{/searchStr}" method="get" th:object="${squareMatrix}">
+        <h4>Search for a String: </h4>
+
+        <p><input type="text" name="word" th:field="*{word}"  placeholder="Please Enter Word" required/></p>
+        <div class="buttonHolder">
+
+            <input class="btn" type="submit" value="Search" />
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
